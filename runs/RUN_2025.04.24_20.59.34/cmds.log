@@ -1,0 +1,230 @@
+Thu Apr 24 20:59:34 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/lefutil.py get_metal_layers -o /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/layers.list /home/merteray/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef}"
+
+Thu Apr 24 20:59:35 +0000 2025 - Executing "{/openlane/scripts/mergeLef.py -o /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/merged.nom.lef -i /home/merteray/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef {/home/merteray/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /home/merteray/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null}"
+
+Thu Apr 24 20:59:35 +0000 2025 - Executing "{/openlane/scripts/mergeLef.py -o /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/merged.min.lef -i /home/merteray/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__min.tlef {/home/merteray/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /home/merteray/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null}"
+
+Thu Apr 24 20:59:35 +0000 2025 - Executing "{/openlane/scripts/mergeLef.py -o /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/merged.max.lef -i /home/merteray/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__max.tlef {/home/merteray/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /home/merteray/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null}"
+
+Thu Apr 24 20:59:35 +0000 2025 - Executing "{python3 /openlane/scripts/mergeLib.py --output /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/synthesis/merged.lib --name sky130A_merged /home/merteray/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib}"
+
+Thu Apr 24 20:59:36 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/synthesis/trimmed.lib.exclude.list --output /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/synthesis/trimmed.lib /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/synthesis/merged.lib}"
+
+Thu Apr 24 20:59:36 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/cts/cts.lib.exclude.list --output /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/cts/cts.lib /home/merteray/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib}"
+
+Thu Apr 24 20:59:36 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/cts/cts-fastest.lib.exclude.list --output /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/cts/cts-fastest.lib /home/merteray/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib}"
+
+Thu Apr 24 20:59:37 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/cts/cts-slowest.lib.exclude.list --output /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/cts/cts-slowest.lib /home/merteray/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib}"
+
+Thu Apr 24 20:59:37 +0000 2025 - Executing "{python3 /openlane/scripts/new_tracks.py -i /home/merteray/.volare/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tracks.info -o /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/routing/config.tracks}"
+
+Thu Apr 24 20:59:37 +0000 2025 - Executing "{echo {OpenLane e73fb3c57e687a0023fcd4dcfd1566ecd478362a} > /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/OPENLANE_COMMIT}"
+
+Thu Apr 24 20:59:37 +0000 2025 - Executing "{yosys -c /openlane/scripts/yosys/blackbox.tcl}"
+
+Thu Apr 24 20:59:37 +0000 2025 - Executing "{verilator -Wall --lint-only --Wno-DECLFILENAME --top-module twoscomplement /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/synthesis/blackbox/sky130_fd_sc_hd__blackbox.v /openlane/designs/twoscomplement/src/twoscomplement.v -Wno-fatal --relative-includes |& tee /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/synthesis/linter.log /dev/null}"
+
+Thu Apr 24 20:59:38 +0000 2025 - Executing "{sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /home/merteray/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib > /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/synthesis/1-sky130_fd_sc_hd__tt_025C_1v80.no_pg.lib}"
+
+Thu Apr 24 20:59:38 +0000 2025 - Executing "{sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/synthesis/trimmed.lib > /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/synthesis/1-trimmed.no_pg.lib}"
+
+Thu Apr 24 20:59:38 +0000 2025 - Executing "yosys -c /openlane/scripts/yosys/synth.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/synthesis/1-synthesis.log"
+
+Thu Apr 24 20:59:38 +0000 2025 - Executing "{yosys -c /openlane/scripts/yosys/synth.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/synthesis/1-synthesis.log}"
+
+Thu Apr 24 20:59:39 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/twoscomplement\/runs\/RUN_2025.04.24_20.59.34\/results\/synthesis\/twoscomplement.v/} /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/config.tcl}"
+
+Thu Apr 24 20:59:39 +0000 2025 - Executing "{sed -i.bak /defparam/d /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/results/synthesis/twoscomplement.v}"
+
+Thu Apr 24 20:59:39 +0000 2025 - Executing "sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/synthesis/2-sta.log"
+
+Thu Apr 24 20:59:39 +0000 2025 - Executing "{sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/synthesis/2-sta.log}"
+
+Thu Apr 24 20:59:39 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/floorplan.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/floorplan/3-initial_fp.log"
+
+Thu Apr 24 20:59:39 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/floorplan.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/floorplan/3-initial_fp.log}"
+
+Thu Apr 24 20:59:40 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/defutil.py extract_core_dims --output-data /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/dimensions.txt --input-lef /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/merged.nom.lef /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/floorplan/3-initial_fp.def}"
+
+Thu Apr 24 20:59:41 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/io_place.py --config /openlane/designs/twoscomplement/pin_order.cfg --hor-layer met3 --ver-layer met2 --ver-width-mult 2 --hor-width-mult 2 --hor-extension 0 --ver-extension 0 --length 4 --unmatched-error --input-lef /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/merged.nom.lef --output-def /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/floorplan/4-io.def --output /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/floorplan/4-io.odb /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/floorplan/3-initial_fp.odb |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/floorplan/4-place_io.log}"
+
+Thu Apr 24 20:59:41 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/tapcell.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/floorplan/5-tap.log"
+
+Thu Apr 24 20:59:41 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/tapcell.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/floorplan/5-tap.log}"
+
+Thu Apr 24 20:59:42 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/pdn.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/floorplan/6-pdn.log"
+
+Thu Apr 24 20:59:42 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/pdn.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/floorplan/6-pdn.log}"
+
+Thu Apr 24 20:59:42 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/random_place.py --input-lef /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/merged.nom.lef --output-def /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/placement/7-global.def --output /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/placement/7-global.odb /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/results/floorplan/twoscomplement.odb |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/placement/7-global.log}"
+
+Thu Apr 24 20:59:43 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/placement/8-resizer.log"
+
+Thu Apr 24 20:59:43 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/resizer.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/placement/8-resizer.log}"
+
+Thu Apr 24 20:59:45 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/twoscomplement\/runs\/RUN_2025.04.24_20.59.34\/tmp\/placement\/8-resizer.nl.v/} /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/config.tcl}"
+
+Thu Apr 24 20:59:45 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/dpl.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/placement/9-detailed.log"
+
+Thu Apr 24 20:59:45 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/dpl.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/placement/9-detailed.log}"
+
+Thu Apr 24 20:59:46 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/twoscomplement\/runs\/RUN_2025.04.24_20.59.34\/results\/placement\/twoscomplement.nl.v/} /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/config.tcl}"
+
+Thu Apr 24 20:59:46 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/placement/10-dpl_sta.log"
+
+Thu Apr 24 20:59:46 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/placement/10-dpl_sta.log}"
+
+Thu Apr 24 20:59:46 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/cts.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/cts/11-cts.log"
+
+Thu Apr 24 20:59:46 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/cts.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/cts/11-cts.log}"
+
+Thu Apr 24 20:59:54 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/cts/12-cts_sta.log"
+
+Thu Apr 24 20:59:54 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/cts/12-cts_sta.log}"
+
+Thu Apr 24 20:59:55 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer_timing.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/cts/13-resizer.log"
+
+Thu Apr 24 20:59:55 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/resizer_timing.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/cts/13-resizer.log}"
+
+Thu Apr 24 20:59:57 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/twoscomplement\/runs\/RUN_2025.04.24_20.59.34\/tmp\/cts\/13-twoscomplement.resized.nl.v/} /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/config.tcl}"
+
+Thu Apr 24 20:59:57 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer_routing_design.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/14-resizer_design.log"
+
+Thu Apr 24 20:59:57 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/resizer_routing_design.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/14-resizer_design.log}"
+
+Thu Apr 24 20:59:59 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/twoscomplement\/runs\/RUN_2025.04.24_20.59.34\/tmp\/14-twoscomplement.nl.v/} /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/config.tcl}"
+
+Thu Apr 24 20:59:59 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/15-rsz_design_sta.log"
+
+Thu Apr 24 20:59:59 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/15-rsz_design_sta.log}"
+
+Thu Apr 24 21:00:00 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer_routing_timing.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/16-resizer_timing.log"
+
+Thu Apr 24 21:00:00 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/resizer_routing_timing.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/16-resizer_timing.log}"
+
+Thu Apr 24 21:00:02 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/twoscomplement\/runs\/RUN_2025.04.24_20.59.34\/tmp\/16-twoscomplement.nl.v/} /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/config.tcl}"
+
+Thu Apr 24 21:00:02 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/17-rsz_timing_sta.log"
+
+Thu Apr 24 21:00:02 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/17-rsz_timing_sta.log}"
+
+Thu Apr 24 21:00:03 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/repair_antennas.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/18-global.log"
+
+Thu Apr 24 21:00:03 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/repair_antennas.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/18-global.log}"
+
+Thu Apr 24 21:00:04 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/write_views.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/18-global_write_netlist.log"
+
+Thu Apr 24 21:00:04 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/write_views.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/18-global_write_netlist.log}"
+
+Thu Apr 24 21:00:04 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/twoscomplement\/runs\/RUN_2025.04.24_20.59.34\/tmp\/routing\/global.nl.v/} /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/config.tcl}"
+
+Thu Apr 24 21:00:04 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/20-grt_sta.log"
+
+Thu Apr 24 21:00:04 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/20-grt_sta.log}"
+
+Thu Apr 24 21:00:05 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/fill.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/21-fill.log"
+
+Thu Apr 24 21:00:05 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/fill.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/21-fill.log}"
+
+Thu Apr 24 21:00:06 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/twoscomplement\/runs\/RUN_2025.04.24_20.59.34\/tmp\/routing\/21-fill.nl.v/} /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/config.tcl}"
+
+Thu Apr 24 21:00:06 +0000 2025 - Executing "openroad -exit -metrics /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/routing/22-drt_metrics.json /openlane/scripts/openroad/droute.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/22-detailed.log"
+
+Thu Apr 24 21:00:06 +0000 2025 - Executing "{openroad -exit -metrics /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/routing/22-drt_metrics.json /openlane/scripts/openroad/droute.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/22-detailed.log}"
+
+Thu Apr 24 21:00:08 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/twoscomplement\/runs\/RUN_2025.04.24_20.59.34\/results\/routing\/twoscomplement.nl.v/} /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/config.tcl}"
+
+Thu Apr 24 21:00:08 +0000 2025 - Executing "{python3 /openlane/scripts/drc_rosetta.py tr to_klayout -o /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/routing/drt.klayout.xml --design-name twoscomplement /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/routing/drt.drc}"
+
+Thu Apr 24 21:00:08 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/wire_lengths.py --report-out /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/routing/23-wire_lengths.csv --input-lef /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/merged.nom.lef --output-def /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/results/routing/twoscomplement.def --output /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/results/routing/twoscomplement.odb /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/results/routing/twoscomplement.odb |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/routing/23-wire_lengths.log}"
+
+Thu Apr 24 21:00:09 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/rcx.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/24-parasitics_extraction.min.log"
+
+Thu Apr 24 21:00:09 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/rcx.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/24-parasitics_extraction.min.log}"
+
+Thu Apr 24 21:00:09 +0000 2025 - Executing "sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/25-rcx_mcsta.min.log"
+
+Thu Apr 24 21:00:09 +0000 2025 - Executing "{sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/25-rcx_mcsta.min.log}"
+
+Thu Apr 24 21:00:11 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/rcx.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/26-parasitics_extraction.max.log"
+
+Thu Apr 24 21:00:11 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/rcx.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/26-parasitics_extraction.max.log}"
+
+Thu Apr 24 21:00:12 +0000 2025 - Executing "sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/27-rcx_mcsta.max.log"
+
+Thu Apr 24 21:00:12 +0000 2025 - Executing "{sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/27-rcx_mcsta.max.log}"
+
+Thu Apr 24 21:00:14 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/rcx.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/28-parasitics_extraction.nom.log"
+
+Thu Apr 24 21:00:14 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/rcx.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/28-parasitics_extraction.nom.log}"
+
+Thu Apr 24 21:00:14 +0000 2025 - Executing "sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/29-rcx_mcsta.nom.log"
+
+Thu Apr 24 21:00:14 +0000 2025 - Executing "{sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/29-rcx_mcsta.nom.log}"
+
+Thu Apr 24 21:00:16 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/irdrop.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/30-irdrop.log"
+
+Thu Apr 24 21:00:16 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/irdrop.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/30-irdrop.log}"
+
+Thu Apr 24 21:00:17 +0000 2025 - Executing "magic -noconsole -dnull -rcfile /home/merteray/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/31-gdsii.log"
+
+Thu Apr 24 21:00:17 +0000 2025 - Executing "{magic -noconsole -dnull -rcfile /home/merteray/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/31-gdsii.log}"
+
+Thu Apr 24 21:00:17 +0000 2025 - Executing "magic -noconsole -dnull -rcfile /home/merteray/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/31-gds_ptrs.log"
+
+Thu Apr 24 21:00:17 +0000 2025 - Executing "{magic -noconsole -dnull -rcfile /home/merteray/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/31-gds_ptrs.log}"
+
+Thu Apr 24 21:00:18 +0000 2025 - Executing "{sed -i.bak -n {/^<< properties >>/,/^<< end >>/p} /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/signoff/gds_ptrs.mag}"
+
+Thu Apr 24 21:00:18 +0000 2025 - Executing "magic -noconsole -dnull -rcfile /home/merteray/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/31-lef.log"
+
+Thu Apr 24 21:00:18 +0000 2025 - Executing "{magic -noconsole -dnull -rcfile /home/merteray/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/31-lef.log}"
+
+Thu Apr 24 21:00:18 +0000 2025 - Executing "magic -noconsole -dnull -rcfile /home/merteray/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/31-maglef.log"
+
+Thu Apr 24 21:00:18 +0000 2025 - Executing "{magic -noconsole -dnull -rcfile /home/merteray/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/31-maglef.log}"
+
+Thu Apr 24 21:00:18 +0000 2025 - Executing "{python3 /openlane/scripts/klayout/stream_out.py --output /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/results/signoff/twoscomplement.klayout.gds --lyt /home/merteray/.volare/sky130A/libs.tech/klayout/tech/sky130A.lyt --lym /home/merteray/.volare/sky130A/libs.tech/klayout/tech/sky130A.map --lyp /home/merteray/.volare/sky130A/libs.tech/klayout/tech/sky130A.lyp --top twoscomplement --with-gds-file /home/merteray/.volare/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds --input-lef /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/merged.nom.lef /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/results/routing/twoscomplement.def |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/32-gdsii-klayout.log}"
+
+Thu Apr 24 21:00:19 +0000 2025 - Executing "{klayout -b -r /openlane/scripts/klayout/xor.drc -rd a=/openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/results/signoff/twoscomplement.gds -rd b=/openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/results/signoff/twoscomplement.klayout.gds -rd jobs=1 -rd rdb_out=/openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/signoff/33-xor.xml -rd ignore=81/14 -rd rpt_out=/openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/signoff/33-xor.rpt |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/33-xor.log}"
+
+Thu Apr 24 21:00:20 +0000 2025 - Executing "magic -noconsole -dnull -rcfile /home/merteray/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/34-spice.log"
+
+Thu Apr 24 21:00:20 +0000 2025 - Executing "{magic -noconsole -dnull -rcfile /home/merteray/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/34-spice.log}"
+
+Thu Apr 24 21:00:20 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/power_utils.py write_powered_def --output /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/signoff/34-twoscomplement.p.def --input-lef /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/merged.nom.lef --power-port VPWR --ground-port VGND --powered-netlist {} /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/results/routing/twoscomplement.def |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/35-write_powered_def.log}"
+
+Thu Apr 24 21:00:21 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/write_views.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/35-write_powered_verilog.log"
+
+Thu Apr 24 21:00:21 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/write_views.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/35-write_powered_verilog.log}"
+
+Thu Apr 24 21:00:22 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/twoscomplement\/runs\/RUN_2025.04.24_20.59.34\/tmp\/signoff\/34-twoscomplement.nl.v/} /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/config.tcl}"
+
+Thu Apr 24 21:00:22 +0000 2025 - Executing "{netgen -batch source /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/tmp/signoff/37-setup_file.lef.lvs |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/37-lvs.lef.log}"
+
+Thu Apr 24 21:00:22 +0000 2025 - Executing "magic -noconsole -dnull -rcfile /home/merteray/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/38-drc.log"
+
+Thu Apr 24 21:00:22 +0000 2025 - Executing "{magic -noconsole -dnull -rcfile /home/merteray/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/38-drc.log}"
+
+Thu Apr 24 21:00:23 +0000 2025 - Executing "{python3 /openlane/scripts/drc_rosetta.py magic to_tcl -o /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/signoff/drc.tcl /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/signoff/drc.rpt}"
+
+Thu Apr 24 21:00:23 +0000 2025 - Executing "{python3 /openlane/scripts/drc_rosetta.py magic to_tr -o /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/signoff/drc.tr /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/signoff/drc.rpt}"
+
+Thu Apr 24 21:00:23 +0000 2025 - Executing "{python3 /openlane/scripts/drc_rosetta.py tr to_klayout -o /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/signoff/drc.klayout.xml --design-name twoscomplement /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/signoff/drc.tr}"
+
+Thu Apr 24 21:00:23 +0000 2025 - Executing "{python3 /openlane/scripts/drc_rosetta.py magic to_rdb -o /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/signoff/drc.rdb /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/signoff/drc.rpt}"
+
+Thu Apr 24 21:00:23 +0000 2025 - Executing "{klayout -b -zz -r /home/merteray/.volare/sky130A/libs.tech/klayout/drc/sky130A_mr.drc -rd topcell=twoscomplement -rd input=/openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/results/signoff/twoscomplement.gds -rd report=/openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/signoff/violations.xml -rd feol=true -rd beol=true -rd floating_metal=false -rd seal=true -rd thread=1 |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/39-drc-klayout.log}"
+
+Thu Apr 24 21:00:24 +0000 2025 - Executing "{python3 /openlane/scripts/klayout/xml_drc_report_to_json.py --xml-file /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/signoff/violations.xml --json-file /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/signoff/violations.json}"
+
+Thu Apr 24 21:00:24 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/antenna_check.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/40-arc.log"
+
+Thu Apr 24 21:00:24 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/antenna_check.tcl |& tee /dev/null /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/40-arc.log}"
+
+Thu Apr 24 21:00:25 +0000 2025 - Executing "{python3 /openlane/scripts/extract_antenna_violators.py --output /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/signoff/40-antenna_violators.rpt --plain-out /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/signoff/40-antenna_violators_pins.txt /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/logs/signoff/40-arc.log}"
+
+Thu Apr 24 21:00:25 +0000 2025 - Executing "{python3 /openlane/scripts/write_runtime.py --conclude --seconds --time-in 1745528425 {flow completed}}"
+
+Thu Apr 24 21:00:25 +0000 2025 - Executing "{python3 /openlane/scripts/generate_reports.py -d /openlane/designs/twoscomplement --design_name twoscomplement --tag RUN_2025.04.24_20.59.34 --output_file /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/metrics.csv --man_report /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34/reports/manufacturability.rpt --run_path /openlane/designs/twoscomplement/runs/RUN_2025.04.24_20.59.34}"
+
